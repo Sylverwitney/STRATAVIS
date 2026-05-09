@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a1628;
+  --color-navy-mid: #12213a;
+  --color-navy-light: #1a2f4f;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c97a;
+  --color-cream: #f5f0e8;
+  --color-steel: #8a9ab5;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  --animate-fade-up: fade-up 0.7s ease-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-[#d4dce8] font-sans font-light antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-white tracking-tight;
+  }
+}
+
+.institutional-glass {
+  @apply bg-navy-mid/90 backdrop-blur-md border-b border-gold/20;
+}
+
+.institutional-border {
+  @apply border border-gold/15 transition-all duration-300;
+}
+
+.gold-link {
+  @apply text-gold hover:text-gold-light transition-all duration-300;
+}
+
+.btn-gold {
+  @apply bg-gold text-navy px-10 py-3.5 rounded-sm font-semibold tracking-widest uppercase text-[11px] hover:bg-gold-light transition-all duration-500 shadow-lg shadow-gold/5;
+}
+
+.section-padding {
+  @apply py-28 px-6 md:px-12 lg:px-24;
+}
+
+.tracking-institutional {
+  @apply tracking-[0.4em] uppercase font-medium;
+}
+
+.tracking-refined {
+  @apply tracking-[0.15em] uppercase font-semibold;
+}
